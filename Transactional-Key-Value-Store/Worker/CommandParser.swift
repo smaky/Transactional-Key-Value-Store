@@ -12,7 +12,15 @@ protocol Command: Equatable {
     mutating func run(parameters: [String]) throws -> String?
 }
 
+extension Command {
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.baseArg == rhs.baseArg
+    }
+}
+
 struct CommandParser {
+    private(set) var commands: [any Command] = []
+    
     enum ArgumentParserError: Error, LocalizedError {
         case invalidCommand
         
@@ -24,16 +32,24 @@ struct CommandParser {
         }
     }
     
-    private(set) var commands: [any Command] = []
+    func parse(command: String) throws -> (command: any Command, args: [String]) {
+        let args = try argsFrom(command: command)
+        let command = try getCommand(for: args)
+        return (command: command, args: Array(args.dropFirst()))
+    }
     
-    func parse(command: String) throws -> String? {
-        let args = command.lowercased().components(separatedBy: " ")
-        if args.count > 0 {
-            guard var command = commands.first(where: { $0.baseArg.lowercased() == args[0] })
-            else { throw ArgumentParserError.invalidCommand }
-            return try command.run(parameters: [])
-        }
-        return nil
+    private func getCommand(for args: [String]) throws -> any Command {
+        guard let command = commands.first(where: { $0.baseArg.lowercased() == args.first?.lowercased() })
+        else { throw ArgumentParserError.invalidCommand }
+        return command
+    }
+    
+    private func argsFrom(command: String) throws -> [String] {
+        let args = command
+            .components(separatedBy: .whitespaces)
+            .filter { !$0.isEmpty }
+        if args.count == 0 { throw ArgumentParserError.invalidCommand }
+        return args
     }
 }
 

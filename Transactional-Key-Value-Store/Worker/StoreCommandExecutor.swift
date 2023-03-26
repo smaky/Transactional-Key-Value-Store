@@ -8,16 +8,23 @@
 import Foundation
 
 final class StoreCommandExecutor: CommandExecutorInterface {
-    private var store: StoreInterface
+    private var commandParser: CommandParser
     
     init(store: StoreInterface) {
-        self.store = store
+        self.commandParser = CommandParserBuilder()
+            .with(HelpCommand())
+            .with(SetCommand(store: store))
+            .build()
     }
     
     func executeCommand(_ commandText: String) {
-        let args = commandText.lowercased().components(separatedBy: " ")
-        if args.count == 3, args[0] == "set" {
-            store.set(value: args[2], for: args[1])
+        do {
+            let commandWithArgs = try commandParser.parse(command: commandText)
+            var command = commandWithArgs.command
+            let args = commandWithArgs.args
+            let _ = try command.run(parameters: args)
+        } catch {
+            
         }
     }
 }

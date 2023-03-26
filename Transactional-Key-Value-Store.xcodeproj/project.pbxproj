@@ -24,6 +24,8 @@
 		1762C81629D05478004CC9F7 /* LogRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C81529D05478004CC9F7 /* LogRowView.swift */; };
 		1762C81829D05B00004CC9F7 /* CommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C81729D05B00004CC9F7 /* CommandParser.swift */; };
 		1762C81A29D05C37004CC9F7 /* CommandParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C81929D05C37004CC9F7 /* CommandParserTests.swift */; };
+		1762C81C29D06109004CC9F7 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C81B29D06109004CC9F7 /* Commands.swift */; };
+		17904F8029D0649D0095089B /* CommandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17904F7F29D0649D0095089B /* CommandsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		1762C81529D05478004CC9F7 /* LogRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRowView.swift; sourceTree = "<group>"; };
 		1762C81729D05B00004CC9F7 /* CommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParser.swift; sourceTree = "<group>"; };
 		1762C81929D05C37004CC9F7 /* CommandParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParserTests.swift; sourceTree = "<group>"; };
+		1762C81B29D06109004CC9F7 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		17904F7F29D0649D0095089B /* CommandsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,13 +139,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		1762C7F829D046FE004CC9F7 /* Store */ = {
+		1762C7F829D046FE004CC9F7 /* VirtualStore */ = {
 			isa = PBXGroup;
 			children = (
-				1762C7F929D0471E004CC9F7 /* StoreInterface.swift */,
 				1762C7FB29D04756004CC9F7 /* VirtualStore.swift */,
 			);
-			path = Store;
+			path = VirtualStore;
 			sourceTree = "<group>";
 		};
 		1762C80129D04BC8004CC9F7 /* Scene */ = {
@@ -158,7 +161,8 @@
 		1762C80229D04BD4004CC9F7 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				1762C7F829D046FE004CC9F7 /* Store */,
+				1762C7F929D0471E004CC9F7 /* StoreInterface.swift */,
+				1762C7F829D046FE004CC9F7 /* VirtualStore */,
 				1762C7F729D046C0004CC9F7 /* Model */,
 			);
 			path = Repository;
@@ -170,6 +174,7 @@
 				1762C80429D04C09004CC9F7 /* CommandExecutorInterface.swift */,
 				1762C80629D04C44004CC9F7 /* StoreCommandExecutor.swift */,
 				1762C81729D05B00004CC9F7 /* CommandParser.swift */,
+				1762C81B29D06109004CC9F7 /* Commands.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 			children = (
 				1762C80E29D04DE1004CC9F7 /* StoreCommandExecutorTests.swift */,
 				1762C81929D05C37004CC9F7 /* CommandParserTests.swift */,
+				17904F7F29D0649D0095089B /* CommandsTests.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 				1762C80729D04C44004CC9F7 /* StoreCommandExecutor.swift in Sources */,
 				1762C80029D04A19004CC9F7 /* ConsoleViewModel.swift in Sources */,
 				1762C7FA29D0471E004CC9F7 /* StoreInterface.swift in Sources */,
+				1762C81C29D06109004CC9F7 /* Commands.swift in Sources */,
 				1762C81829D05B00004CC9F7 /* CommandParser.swift in Sources */,
 				1762C81429D05350004CC9F7 /* Log.swift in Sources */,
 				1762C7CD29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift in Sources */,
@@ -337,6 +344,7 @@
 				1762C81A29D05C37004CC9F7 /* CommandParserTests.swift in Sources */,
 				1762C80C29D04DB0004CC9F7 /* ConsoleViewModelTests.swift in Sources */,
 				1762C7FE29D047B1004CC9F7 /* VirtualStoreTests.swift in Sources */,
+				17904F8029D0649D0095089B /* CommandsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

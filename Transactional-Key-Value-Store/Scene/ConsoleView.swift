@@ -21,7 +21,7 @@ struct ConsoleView: View {
                             .padding([.leading, .trailing], 15)
                     }
                     Spacer()
-                    TextField("type command", text: $textFieldText)
+                    TextField("Type command: help - for more information", text: $textFieldText)
                         .focused($isFocused)
                         .onSubmit {
                             viewModel.executeCommand(textFieldText)
