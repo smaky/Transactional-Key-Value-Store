@@ -15,6 +15,9 @@ final class StoreCommandExecutor: CommandExecutorInterface {
     }
     
     func executeCommand(_ commandText: String) {
-        
+        let args = commandText.lowercased().components(separatedBy: " ")
+        if args.count == 3, args[0] == "set" {
+            store.set(value: args[2], for: args[1])
+        }
     }
 }
