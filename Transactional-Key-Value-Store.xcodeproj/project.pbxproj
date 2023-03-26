@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1762C7CD29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7CC29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift */; };
-		1762C7CF29D04485004CC9F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7CE29D04485004CC9F7 /* ContentView.swift */; };
+		1762C7CF29D04485004CC9F7 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7CE29D04485004CC9F7 /* ConsoleView.swift */; };
 		1762C7D129D04486004CC9F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1762C7D029D04486004CC9F7 /* Assets.xcassets */; };
 		1762C7D529D04486004CC9F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1762C7D429D04486004CC9F7 /* Preview Assets.xcassets */; };
 		1762C7DF29D04486004CC9F7 /* Transactional_Key_Value_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7DE29D04486004CC9F7 /* Transactional_Key_Value_StoreTests.swift */; };
 		1762C7FA29D0471E004CC9F7 /* StoreInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7F929D0471E004CC9F7 /* StoreInterface.swift */; };
 		1762C7FC29D04756004CC9F7 /* VirtualStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7FB29D04756004CC9F7 /* VirtualStore.swift */; };
 		1762C7FE29D047B1004CC9F7 /* VirtualStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7FD29D047B1004CC9F7 /* VirtualStoreTests.swift */; };
+		1762C80029D04A19004CC9F7 /* ConsoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7FF29D04A19004CC9F7 /* ConsoleViewModel.swift */; };
+		1762C80529D04C09004CC9F7 /* CommandExecutorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C80429D04C09004CC9F7 /* CommandExecutorInterface.swift */; };
+		1762C80729D04C44004CC9F7 /* StoreCommandExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C80629D04C44004CC9F7 /* StoreCommandExecutor.swift */; };
+		1762C80C29D04DB0004CC9F7 /* ConsoleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C80B29D04DB0004CC9F7 /* ConsoleViewModelTests.swift */; };
+		1762C80F29D04DE1004CC9F7 /* StoreCommandExecutorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C80E29D04DE1004CC9F7 /* StoreCommandExecutorTests.swift */; };
+		1762C81129D05028004CC9F7 /* StoreInstanceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C81029D05028004CC9F7 /* StoreInstanceSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +36,7 @@
 /* Begin PBXFileReference section */
 		1762C7C929D04485004CC9F7 /* Transactional-Key-Value-Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transactional-Key-Value-Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1762C7CC29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactional_Key_Value_StoreApp.swift; sourceTree = "<group>"; };
-		1762C7CE29D04485004CC9F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1762C7CE29D04485004CC9F7 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 		1762C7D029D04486004CC9F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1762C7D229D04486004CC9F7 /* Transactional_Key_Value_Store.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Transactional_Key_Value_Store.entitlements; sourceTree = "<group>"; };
 		1762C7D429D04486004CC9F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -39,6 +45,12 @@
 		1762C7F929D0471E004CC9F7 /* StoreInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInterface.swift; sourceTree = "<group>"; };
 		1762C7FB29D04756004CC9F7 /* VirtualStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualStore.swift; sourceTree = "<group>"; };
 		1762C7FD29D047B1004CC9F7 /* VirtualStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualStoreTests.swift; sourceTree = "<group>"; };
+		1762C7FF29D04A19004CC9F7 /* ConsoleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewModel.swift; sourceTree = "<group>"; };
+		1762C80429D04C09004CC9F7 /* CommandExecutorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandExecutorInterface.swift; sourceTree = "<group>"; };
+		1762C80629D04C44004CC9F7 /* StoreCommandExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCommandExecutor.swift; sourceTree = "<group>"; };
+		1762C80B29D04DB0004CC9F7 /* ConsoleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewModelTests.swift; sourceTree = "<group>"; };
+		1762C80E29D04DE1004CC9F7 /* StoreCommandExecutorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCommandExecutorTests.swift; sourceTree = "<group>"; };
+		1762C81029D05028004CC9F7 /* StoreInstanceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInstanceSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +92,10 @@
 		1762C7CB29D04485004CC9F7 /* Transactional-Key-Value-Store */ = {
 			isa = PBXGroup;
 			children = (
-				1762C7F829D046FE004CC9F7 /* Store */,
-				1762C7F729D046C0004CC9F7 /* Model */,
+				1762C80329D04BF0004CC9F7 /* Worker */,
+				1762C80229D04BD4004CC9F7 /* Repository */,
+				1762C80129D04BC8004CC9F7 /* Scene */,
 				1762C7CC29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift */,
-				1762C7CE29D04485004CC9F7 /* ContentView.swift */,
 				1762C7D029D04486004CC9F7 /* Assets.xcassets */,
 				1762C7D229D04486004CC9F7 /* Transactional_Key_Value_Store.entitlements */,
 				1762C7D329D04486004CC9F7 /* Preview Content */,
@@ -102,8 +114,11 @@
 		1762C7DD29D04486004CC9F7 /* Transactional-Key-Value-StoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				1762C80D29D04DCE004CC9F7 /* Worker */,
+				1762C80A29D04D93004CC9F7 /* Scene */,
+				1762C80829D04D70004CC9F7 /* Repository */,
 				1762C7DE29D04486004CC9F7 /* Transactional_Key_Value_StoreTests.swift */,
-				1762C7FD29D047B1004CC9F7 /* VirtualStoreTests.swift */,
+				1762C81029D05028004CC9F7 /* StoreInstanceSpy.swift */,
 			);
 			path = "Transactional-Key-Value-StoreTests";
 			sourceTree = "<group>";
@@ -122,6 +137,65 @@
 				1762C7FB29D04756004CC9F7 /* VirtualStore.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		1762C80129D04BC8004CC9F7 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1762C7CE29D04485004CC9F7 /* ConsoleView.swift */,
+				1762C7FF29D04A19004CC9F7 /* ConsoleViewModel.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		1762C80229D04BD4004CC9F7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1762C7F829D046FE004CC9F7 /* Store */,
+				1762C7F729D046C0004CC9F7 /* Model */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1762C80329D04BF0004CC9F7 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				1762C80429D04C09004CC9F7 /* CommandExecutorInterface.swift */,
+				1762C80629D04C44004CC9F7 /* StoreCommandExecutor.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		1762C80829D04D70004CC9F7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1762C80929D04D8A004CC9F7 /* Store */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1762C80929D04D8A004CC9F7 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				1762C7FD29D047B1004CC9F7 /* VirtualStoreTests.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		1762C80A29D04D93004CC9F7 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1762C80B29D04DB0004CC9F7 /* ConsoleViewModelTests.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		1762C80D29D04DCE004CC9F7 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				1762C80E29D04DE1004CC9F7 /* StoreCommandExecutorTests.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1762C7CF29D04485004CC9F7 /* ContentView.swift in Sources */,
+				1762C7CF29D04485004CC9F7 /* ConsoleView.swift in Sources */,
 				1762C7FC29D04756004CC9F7 /* VirtualStore.swift in Sources */,
+				1762C80529D04C09004CC9F7 /* CommandExecutorInterface.swift in Sources */,
+				1762C80729D04C44004CC9F7 /* StoreCommandExecutor.swift in Sources */,
+				1762C80029D04A19004CC9F7 /* ConsoleViewModel.swift in Sources */,
 				1762C7FA29D0471E004CC9F7 /* StoreInterface.swift in Sources */,
 				1762C7CD29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift in Sources */,
 			);
@@ -235,7 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1762C80F29D04DE1004CC9F7 /* StoreCommandExecutorTests.swift in Sources */,
 				1762C7DF29D04486004CC9F7 /* Transactional_Key_Value_StoreTests.swift in Sources */,
+				1762C81129D05028004CC9F7 /* StoreInstanceSpy.swift in Sources */,
+				1762C80C29D04DB0004CC9F7 /* ConsoleViewModelTests.swift in Sources */,
 				1762C7FE29D047B1004CC9F7 /* VirtualStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

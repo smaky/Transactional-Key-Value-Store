@@ -12,9 +12,9 @@ struct Transactional_Key_Value_StoreApp: App {
     var body: some Scene {
         WindowGroup {
         #if os(macOS)
-            ContentView().frame(width: 500, height: 800)
+            ConsoleView().frame(width: 500, height: 800)
         #else
-            ContentView()
+            ConsoleView()
         #endif
         }
     }
