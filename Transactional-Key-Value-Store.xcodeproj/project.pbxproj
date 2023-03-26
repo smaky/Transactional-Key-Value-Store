@@ -25,6 +25,8 @@
 		1762C81829D05B00004CC9F7 /* CommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C81729D05B00004CC9F7 /* CommandParser.swift */; };
 		1762C81A29D05C37004CC9F7 /* CommandParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C81929D05C37004CC9F7 /* CommandParserTests.swift */; };
 		1762C81C29D06109004CC9F7 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C81B29D06109004CC9F7 /* Commands.swift */; };
+		177A0EDA29D06E2900FE5148 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A0ED929D06E2900FE5148 /* Transaction.swift */; };
+		177A0EDC29D06E4700FE5148 /* StackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A0EDB29D06E4700FE5148 /* StackList.swift */; };
 		17904F8029D0649D0095089B /* CommandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17904F7F29D0649D0095089B /* CommandsTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		1762C81729D05B00004CC9F7 /* CommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParser.swift; sourceTree = "<group>"; };
 		1762C81929D05C37004CC9F7 /* CommandParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParserTests.swift; sourceTree = "<group>"; };
 		1762C81B29D06109004CC9F7 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		177A0ED929D06E2900FE5148 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		177A0EDB29D06E4700FE5148 /* StackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackList.swift; sourceTree = "<group>"; };
 		17904F7F29D0649D0095089B /* CommandsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +139,8 @@
 		1762C7F729D046C0004CC9F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				177A0ED929D06E2900FE5148 /* Transaction.swift */,
+				177A0EDB29D06E4700FE5148 /* StackList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 			files = (
 				1762C7CF29D04485004CC9F7 /* ConsoleView.swift in Sources */,
 				1762C7FC29D04756004CC9F7 /* VirtualStore.swift in Sources */,
+				177A0EDA29D06E2900FE5148 /* Transaction.swift in Sources */,
 				1762C80529D04C09004CC9F7 /* CommandExecutorInterface.swift in Sources */,
 				1762C80729D04C44004CC9F7 /* StoreCommandExecutor.swift in Sources */,
 				1762C80029D04A19004CC9F7 /* ConsoleViewModel.swift in Sources */,
@@ -331,6 +338,7 @@
 				1762C81829D05B00004CC9F7 /* CommandParser.swift in Sources */,
 				1762C81429D05350004CC9F7 /* Log.swift in Sources */,
 				1762C7CD29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift in Sources */,
+				177A0EDC29D06E4700FE5148 /* StackList.swift in Sources */,
 				1762C81629D05478004CC9F7 /* LogRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

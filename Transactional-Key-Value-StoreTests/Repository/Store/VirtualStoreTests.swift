@@ -75,7 +75,7 @@ final class VirtualStoreTests: XCTestCase {
         let value = "456"
         let key = "foo"
         // > BEGIN
-        store.begin()
+        try store.begin()
         // > SET foo 456
         store.set(value: value, for: key)
         
@@ -105,7 +105,7 @@ final class VirtualStoreTests: XCTestCase {
         XCTAssertEqual(value2, try store.get(for: key2))
         
         // > BEGIN
-        store.begin()
+        try store.begin()
         
         // > SET foo 456
         store.set(value: value3, for: key1)
@@ -142,7 +142,7 @@ final class VirtualStoreTests: XCTestCase {
         store.set(value: value1, for: key1)
         XCTAssertEqual(value1, try store.get(for: key1))
         //> BEGIN
-        store.begin()
+        try store.begin()
         //> SET bar 456
         store.set(value: value2, for: key2)
         XCTAssertEqual(value2, try store.get(for: key2))
@@ -150,7 +150,7 @@ final class VirtualStoreTests: XCTestCase {
         store.set(value: value2, for: key1)
         XCTAssertEqual(value2, try store.get(for: key1))
         //> BEGIN
-        store.begin()
+        try store.begin()
         //> COUNT 456
         XCTAssertEqual(2, store.count(for: value2)!)
         

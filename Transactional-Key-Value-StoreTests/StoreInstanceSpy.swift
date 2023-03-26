@@ -13,7 +13,7 @@ final class StoreInstanceSpy: StoreInterface {
         return 0
     }
     
-    func begin() {
+    func begin() throws {
     }
     
     func commit() throws {

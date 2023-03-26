@@ -8,36 +8,61 @@
 import Foundation
 
 final class VirtualStore: StoreInterface {
-    private var bucket: Dictionary<String, String> = [:]
+    private var stackList = StackList<Transaction>()
     
     func count(for value: String) -> Int? {
-        return 0
+        let transaciton = stackList.peek()
+        return transaciton?.count(value: value)
     }
     
-    func begin() {
-        
+    func begin() throws {
+        if stackList.isEmpty() {
+            stackList.push(element: Transaction())
+        }
+        if let transaction = stackList.peek() {
+            stackList.push(element: transaction.copy() as! Transaction)
+        } else {
+            throw StoreInterfaceError.noTransaction
+        }
     }
     
     func commit() throws {
-        throw StoreInterfaceError.noTransaction
+        if stackList.count == 1 {
+            throw StoreInterfaceError.noTransaction
+        }
+        if let transaction = stackList.pop() {
+            stackList.pop()
+            stackList.push(element: transaction)
+        } else {
+            throw StoreInterfaceError.noTransaction
+        }
     }
     
     func rollback() throws {
-        throw StoreInterfaceError.noTransaction
+        if stackList.count == 1 {
+            throw StoreInterfaceError.noTransaction
+        }
+        stackList.pop()
     }
     
     func set(value: String, for key: String) {
-        bucket[key] = value
+        if stackList.isEmpty() {
+            stackList.push(element: Transaction())
+        }
+        let transaction = stackList.peek()
+        transaction?.set(value: value, for: key)
     }
     
     func get(for key: String) throws -> String {
-        guard let value = bucket[key]
+        let transaciton = stackList.peek()
+        guard let value = transaciton?.getValue(for: key)
         else { throw StoreInterfaceError.keyNoSet }
         return value
     }
     
     func delete(for key: String) {
-        bucket[key] = nil
+        let transaciton = stackList.peek()
+        transaciton?.delete(for: key)
     }
     
 }

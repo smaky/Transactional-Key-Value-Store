@@ -12,7 +12,7 @@ protocol StoreInterface {
     func get(for key: String) throws -> String
     func delete(for key: String)
     func count(for value: String) -> Int?
-    func begin()
+    func begin() throws
     func commit() throws
     func rollback() throws
 }
