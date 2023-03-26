@@ -8,6 +8,8 @@
 import Foundation
 
 final class ConsoleViewModel: ObservableObject {
+    @Published var logs: [Log] = []
+    
     private var store: StoreInterface
     private var commandExecutor: CommandExecutorInterface
     
@@ -18,7 +20,7 @@ final class ConsoleViewModel: ObservableObject {
     
     func executeCommand(_ commandText: String) {
         if commandText.isEmpty { return }
-        
+        logs.append(Log(text: commandText))
         commandExecutor.executeCommand(commandText)
     }
 }

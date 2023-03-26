@@ -10,16 +10,39 @@ import SwiftUI
 struct ConsoleView: View {
     @StateObject var viewModel: ConsoleViewModel = ConsoleViewModel(store: VirtualStore())
     @State var textFieldText: String = ""
+    @FocusState private var isFocused: Bool
     
     var body: some View {
         VStack {
-            TextField("Type command", text: $textFieldText)
-                .onSubmit {
-                    viewModel.executeCommand(textFieldText)
+            ScrollViewReader { scrollView in
+                ScrollView(.vertical) {
+                    ForEach(viewModel.logs) { log in
+                        LogRowView(text: log.text)
+                            .padding([.leading, .trailing], 15)
+                    }
+                    Spacer()
+                    TextField("type command", text: $textFieldText)
+                        .focused($isFocused)
+                        .onSubmit {
+                            viewModel.executeCommand(textFieldText)
+                            textFieldText = ""
+                            isFocused = true
+                            
+                        }
+                        .padding([.leading, .trailing], 15)
+                        .id("commandTextField")
                 }
-                .padding([.leading, .trailing], 15)
+                .id("LogScrollView")
+                .onChange(of: viewModel.logs) { _ in
+#if os(macOS)
+                    scrollView.scrollTo("commandTextField", anchor: .top)
+#else
+                    scrollView.scrollTo("commandTextField", anchor: .bottom)
+#endif
+                }
+            }
+            
         }
-        .padding()
     }
 }
 
