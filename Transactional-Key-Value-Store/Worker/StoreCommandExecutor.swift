@@ -14,6 +14,12 @@ final class StoreCommandExecutor: CommandExecutorInterface {
         self.commandParser = CommandParserBuilder()
             .with(HelpCommand())
             .with(SetCommand(store: store))
+            .with(GetCommand(store: store))
+            .with(DeleteCommand(store: store))
+            .with(CountCommand(store: store))
+            .with(BeginCommand(store: store))
+            .with(CommitCommand(store: store))
+            .with(RollbackCommand(store: store))
             .build()
     }
     

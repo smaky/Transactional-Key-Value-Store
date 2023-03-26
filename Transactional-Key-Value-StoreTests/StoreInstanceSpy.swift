@@ -9,20 +9,43 @@ import Foundation
 @testable import Transactional_Key_Value_Store
 
 final class StoreInstanceSpy: StoreInterface {
+    enum TestError: Error {
+        case testError
+    }
+    
+    var countCalled = false
+    var countParam = ""
     func count(for value: String) -> Int? {
-        return 0
+        countParam = value
+        countCalled = true
+        return nil
     }
     
+    var beginCalled = false
+    var throwError = false
     func begin() throws {
+        beginCalled = true
+        if throwError {
+            throw TestError.testError
+        }
     }
     
+    var commitCalled = false
     func commit() throws {
+        commitCalled = true
+        if throwError {
+            throw TestError.testError
+        }
     }
     
+    var rollbackCalled = false
     func rollback() throws {
+        rollbackCalled = true
+        if throwError {
+            throw TestError.testError
+        }
     }
     
-
     var setCalled = false
     var setParams = [String]()
     func set(value: String, for key: String) {
