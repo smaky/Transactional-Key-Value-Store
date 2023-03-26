@@ -17,14 +17,18 @@ final class StoreCommandExecutor: CommandExecutorInterface {
             .build()
     }
     
-    func executeCommand(_ commandText: String) {
+    func executeCommand(_ commandText: String, with logs: inout [Log] ) {
         do {
             let commandWithArgs = try commandParser.parse(command: commandText)
             var command = commandWithArgs.command
             let args = commandWithArgs.args
-            let _ = try command.run(parameters: args)
-        } catch {
-            
+            logs.append(Log(text: "> " + command.baseArg.uppercased() + " " + args.joined(separator: " ")))
+            if let log = try command.run(parameters: args) {
+                logs.append(Log(text: log))
+            }
+        } catch (let error) {
+            logs.append(Log(text: "> " + commandText))
+            logs.append(Log(text: error.localizedDescription))
         }
     }
 }

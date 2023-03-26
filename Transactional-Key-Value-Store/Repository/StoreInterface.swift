@@ -11,4 +11,8 @@ protocol StoreInterface {
     func set(value: String, for key: String)
     func get(for key: String) -> String?
     func delete(for key: String)
+    func count(for value: String) -> Int?
+    func begin() throws
+    func commit() throws
+    func rollback() throws
 }

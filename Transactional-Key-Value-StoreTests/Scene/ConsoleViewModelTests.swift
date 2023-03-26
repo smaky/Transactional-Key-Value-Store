@@ -26,10 +26,13 @@ final class ConsoleViewModelTests: XCTestCase {
         let command1 = "Some command"
         let command2 = "Another command"
         
+        let result1 = "> " + command1
+        let result2 = "Invalid command"
+        
         consoleViewModel.executeCommand(command1)
         consoleViewModel.executeCommand(command2)
         
-        XCTAssertEqual(consoleViewModel.logs[0].text, command1)
-        XCTAssertEqual(consoleViewModel.logs[1].text, command2)
+        XCTAssertEqual(consoleViewModel.logs[0].text, result1)
+        XCTAssertEqual(consoleViewModel.logs[1].text, result2)
     }
 }

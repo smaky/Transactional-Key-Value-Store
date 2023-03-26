@@ -9,6 +9,19 @@ import Foundation
 @testable import Transactional_Key_Value_Store
 
 final class StoreInstanceSpy: StoreInterface {
+    func count(for value: String) -> Int? {
+        return 0
+    }
+    
+    func begin() throws {
+    }
+    
+    func commit() throws {
+    }
+    
+    func rollback() throws {
+    }
+    
 
     var setCalled = false
     var setParams = [String]()

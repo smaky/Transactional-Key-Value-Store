@@ -150,7 +150,6 @@
 		1762C80129D04BC8004CC9F7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				1762C81229D05340004CC9F7 /* Model */,
 				1762C7CE29D04485004CC9F7 /* ConsoleView.swift */,
 				1762C81529D05478004CC9F7 /* LogRowView.swift */,
 				1762C7FF29D04A19004CC9F7 /* ConsoleViewModel.swift */,
@@ -171,6 +170,7 @@
 		1762C80329D04BF0004CC9F7 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
+				1762C81229D05340004CC9F7 /* Model */,
 				1762C80429D04C09004CC9F7 /* CommandExecutorInterface.swift */,
 				1762C80629D04C44004CC9F7 /* StoreCommandExecutor.swift */,
 				1762C81729D05B00004CC9F7 /* CommandParser.swift */,

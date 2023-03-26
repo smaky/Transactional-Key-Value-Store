@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CommandExecutorInterface {
-    func executeCommand(_ commandText: String)
+    func executeCommand(_ commandText: String, with logs: inout [Log])
 }

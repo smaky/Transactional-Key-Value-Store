@@ -20,7 +20,6 @@ final class ConsoleViewModel: ObservableObject {
     
     func executeCommand(_ commandText: String) {
         if commandText.isEmpty { return }
-        logs.append(Log(text: commandText))
-        commandExecutor.executeCommand(commandText)
+        commandExecutor.executeCommand(commandText, with: &logs)
     }
 }

@@ -9,6 +9,23 @@ import Foundation
 
 final class VirtualStore: StoreInterface {
     private var bucket: Dictionary<String, String> = [:]
+    
+    func count(for value: String) -> Int? {
+        return 0
+    }
+    
+    func begin() throws {
+        
+    }
+    
+    func commit() throws {
+        
+    }
+    
+    func rollback() throws {
+        
+    }
+    
     func set(value: String, for key: String) {
         bucket[key] = value
     }
