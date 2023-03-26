@@ -31,6 +31,8 @@ final class StoreCommandExecutor: CommandExecutorInterface {
             if let log = try command.run(parameters: args) {
                 logs.append(Log(text: "> " + command.baseArg.uppercased() + " " + args.joined(separator: " ")))
                 logs.append(Log(text: log))
+            } else {
+                logs.append(Log(text: "> " + command.baseArg.uppercased() + " " + args.joined(separator: " ")))
             }
         } catch (let error) {
             logs.append(Log(text: "> " + commandText))
