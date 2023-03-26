@@ -28,8 +28,8 @@ final class StoreCommandExecutor: CommandExecutorInterface {
             let commandWithArgs = try commandParser.parse(command: commandText)
             var command = commandWithArgs.command
             let args = commandWithArgs.args
-            logs.append(Log(text: "> " + command.baseArg.uppercased() + " " + args.joined(separator: " ")))
             if let log = try command.run(parameters: args) {
+                logs.append(Log(text: "> " + command.baseArg.uppercased() + " " + args.joined(separator: " ")))
                 logs.append(Log(text: log))
             }
         } catch (let error) {
