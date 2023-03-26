@@ -12,6 +12,9 @@
 		1762C7D129D04486004CC9F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1762C7D029D04486004CC9F7 /* Assets.xcassets */; };
 		1762C7D529D04486004CC9F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1762C7D429D04486004CC9F7 /* Preview Assets.xcassets */; };
 		1762C7DF29D04486004CC9F7 /* Transactional_Key_Value_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7DE29D04486004CC9F7 /* Transactional_Key_Value_StoreTests.swift */; };
+		1762C7FA29D0471E004CC9F7 /* StoreInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7F929D0471E004CC9F7 /* StoreInterface.swift */; };
+		1762C7FC29D04756004CC9F7 /* VirtualStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7FB29D04756004CC9F7 /* VirtualStore.swift */; };
+		1762C7FE29D047B1004CC9F7 /* VirtualStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762C7FD29D047B1004CC9F7 /* VirtualStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,9 @@
 		1762C7D429D04486004CC9F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1762C7DA29D04486004CC9F7 /* Transactional-Key-Value-StoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Transactional-Key-Value-StoreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1762C7DE29D04486004CC9F7 /* Transactional_Key_Value_StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactional_Key_Value_StoreTests.swift; sourceTree = "<group>"; };
+		1762C7F929D0471E004CC9F7 /* StoreInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInterface.swift; sourceTree = "<group>"; };
+		1762C7FB29D04756004CC9F7 /* VirtualStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualStore.swift; sourceTree = "<group>"; };
+		1762C7FD29D047B1004CC9F7 /* VirtualStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,8 @@
 		1762C7CB29D04485004CC9F7 /* Transactional-Key-Value-Store */ = {
 			isa = PBXGroup;
 			children = (
+				1762C7F829D046FE004CC9F7 /* Store */,
+				1762C7F729D046C0004CC9F7 /* Model */,
 				1762C7CC29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift */,
 				1762C7CE29D04485004CC9F7 /* ContentView.swift */,
 				1762C7D029D04486004CC9F7 /* Assets.xcassets */,
@@ -95,8 +103,25 @@
 			isa = PBXGroup;
 			children = (
 				1762C7DE29D04486004CC9F7 /* Transactional_Key_Value_StoreTests.swift */,
+				1762C7FD29D047B1004CC9F7 /* VirtualStoreTests.swift */,
 			);
 			path = "Transactional-Key-Value-StoreTests";
+			sourceTree = "<group>";
+		};
+		1762C7F729D046C0004CC9F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1762C7F829D046FE004CC9F7 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				1762C7F929D0471E004CC9F7 /* StoreInterface.swift */,
+				1762C7FB29D04756004CC9F7 /* VirtualStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1762C7CF29D04485004CC9F7 /* ContentView.swift in Sources */,
+				1762C7FC29D04756004CC9F7 /* VirtualStore.swift in Sources */,
+				1762C7FA29D0471E004CC9F7 /* StoreInterface.swift in Sources */,
 				1762C7CD29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1762C7DF29D04486004CC9F7 /* Transactional_Key_Value_StoreTests.swift in Sources */,
+				1762C7FE29D047B1004CC9F7 /* VirtualStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
