@@ -14,24 +14,26 @@ final class VirtualStore: StoreInterface {
         return 0
     }
     
-    func begin() throws {
+    func begin() {
         
     }
     
     func commit() throws {
-        
+        throw StoreInterfaceError.noTransaction
     }
     
     func rollback() throws {
-        
+        throw StoreInterfaceError.noTransaction
     }
     
     func set(value: String, for key: String) {
         bucket[key] = value
     }
     
-    func get(for key: String) -> String? {
-        return bucket[key]
+    func get(for key: String) throws -> String {
+        guard let value = bucket[key]
+        else { throw StoreInterfaceError.keyNoSet }
+        return value
     }
     
     func delete(for key: String) {

@@ -9,10 +9,24 @@ import Foundation
 
 protocol StoreInterface {
     func set(value: String, for key: String)
-    func get(for key: String) -> String?
+    func get(for key: String) throws -> String
     func delete(for key: String)
     func count(for value: String) -> Int?
-    func begin() throws
+    func begin()
     func commit() throws
     func rollback() throws
+}
+
+enum StoreInterfaceError: Error, LocalizedError {
+    case noTransaction
+    case keyNoSet
+    
+    var errorDescription: String? {
+        switch self {
+        case .noTransaction:
+            return "no transaction"
+        case .keyNoSet:
+            return "key no set"
+        }
+    }
 }

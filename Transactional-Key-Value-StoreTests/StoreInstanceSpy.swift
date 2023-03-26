@@ -13,7 +13,7 @@ final class StoreInstanceSpy: StoreInterface {
         return 0
     }
     
-    func begin() throws {
+    func begin() {
     }
     
     func commit() throws {
@@ -32,7 +32,7 @@ final class StoreInstanceSpy: StoreInterface {
     
     var getCalled = false
     var getParam = ""
-    func get(for key: String) -> String? {
+    func get(for key: String) throws -> String {
         getCalled = true
         getParam = key
         return ""
