@@ -9,7 +9,16 @@ import SwiftUI
 
 @main
 struct Transactional_Key_Value_StoreApp: App {
-    private var store: StoreInterface = VirtualStore()
+    private let persistanceController = PersistenceController(isInMemory: true)
+    private var store: StoreInterface
+    
+    init() {
+        persistanceController.persistentContainer.newBackgroundContext()
+        self.store = CoreDataStore(persistanceController: persistanceController)
+        
+//        self.store = VirtualStore()
+    }
+    
     var body: some Scene {
         WindowGroup {
         #if os(macOS)

@@ -13,6 +13,7 @@ final class PersistenceController: NSObject {
     let persistentContainer: NSPersistentContainer
     
     init(isInMemory: Bool = false) {
+        TransactionTransformer.register()
         persistentContainer = NSPersistentContainer(name: containerName)
         if isInMemory {
             persistentContainer.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
@@ -27,5 +28,4 @@ final class PersistenceController: NSObject {
         persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         persistentContainer.viewContext.shouldDeleteInaccessibleFaults = true
     }
-    
 }

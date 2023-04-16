@@ -9,11 +9,11 @@ import XCTest
 @testable import Transactional_Key_Value_Store
 
 final class CoreDataStoreTests: XCTestCase {
-
-    var store: StoreInterface!
+    private var store: StoreInterface!
     
     override func setUpWithError() throws {
-        store = CoreDataStore()
+        
+        store = CoreDataStore(persistanceController: PersistenceController(isInMemory: true))
     }
 
     func testSetAndGetInTransaction() throws {
