@@ -15,6 +15,11 @@ protocol StoreInterface {
     func begin() throws
     func commit() throws
     func rollback() throws
+    func drop()
+}
+
+extension StoreInterface {
+    func drop() {}
 }
 
 enum StoreInterfaceError: Error, LocalizedError {

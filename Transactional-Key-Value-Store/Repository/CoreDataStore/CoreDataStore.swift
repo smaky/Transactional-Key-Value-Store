@@ -104,4 +104,8 @@ final class CoreDataStore: StoreInterface {
         let storedTransaction =  StoredTransaction(context: context)
         storedTransaction.transaction = Transaction()
     }
+    
+    func drop() {
+        try? persistanceController.drop()
+    }
 }

@@ -20,6 +20,7 @@ final class StoreCommandExecutor: CommandExecutorInterface {
             .with(BeginCommand(store: store))
             .with(CommitCommand(store: store))
             .with(RollbackCommand(store: store))
+            .with(DropCommand(store: store))
             .build()
     }
     

@@ -20,6 +20,7 @@ struct HelpCommand: Command {
                 BEGIN             // start a new transaction
                 COMMIT            // complete the current transaction
                 ROLLBACK          // revert to state prior to BEGIN call
+                DROP              // drop all database (if exist)
                 """
     }
 }
@@ -129,6 +130,21 @@ struct RollbackCommand: Command {
     @discardableResult
     func run(parameters: [String]) throws -> String? {
         try store.rollback()
+        return nil
+    }
+}
+
+struct DropCommand: Command {
+    let baseArg: String = "drop"
+    private var store: StoreInterface
+    
+    init (store: StoreInterface) {
+        self.store = store
+    }
+    
+    @discardableResult
+    func run(parameters: [String]) throws -> String? {
+        store.drop()
         return nil
     }
 }

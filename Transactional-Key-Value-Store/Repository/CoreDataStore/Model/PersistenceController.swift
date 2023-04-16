@@ -10,7 +10,7 @@ import CoreData
 
 final class PersistenceController: NSObject {
     private let containerName = "Transactional-Key-Value-Store"
-    let persistentContainer: NSPersistentContainer
+    var persistentContainer: NSPersistentContainer
     
     init(isInMemory: Bool = false) {
         TransactionTransformer.register()
@@ -29,7 +29,7 @@ final class PersistenceController: NSObject {
         persistentContainer.viewContext.shouldDeleteInaccessibleFaults = true
     }
     
-    func saveContext (context: NSManagedObjectContext, mergeToParent: Bool = false) {
+    func saveContext (context: NSManagedObjectContext) {
         if context.hasChanges {
             do {
                 try context.save()
@@ -38,5 +38,27 @@ final class PersistenceController: NSObject {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func drop() throws {
+        let storeContainer =
+            persistentContainer.persistentStoreCoordinator
+
+        for store in storeContainer.persistentStores {
+            try storeContainer.destroyPersistentStore(
+                at: store.url!,
+                ofType: store.type,
+                options: nil
+            )
+        }
+
+        persistentContainer = NSPersistentContainer(
+            name: containerName
+        )
+
+        persistentContainer.loadPersistentStores {
+            (store, error) in
+        }
+
     }
 }
