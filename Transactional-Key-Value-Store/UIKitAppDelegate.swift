@@ -10,7 +10,7 @@ import UIKit
 class UIKitAppDelegate: NSObject, UIApplicationDelegate {
     var persistanceController: PersistenceController? = nil
     
-    func applicationWillResignActive(_ application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         if let persistanceController = persistanceController {
             persistanceController.saveContext(context: persistanceController.persistentContainer.viewContext)
         }
