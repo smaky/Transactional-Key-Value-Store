@@ -30,6 +30,8 @@
 		17904F8029D0649D0095089B /* CommandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17904F7F29D0649D0095089B /* CommandsTests.swift */; };
 		17FAF98629EBFE69004CC8E1 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FAF98529EBFE69004CC8E1 /* CoreDataStore.swift */; };
 		17FAF98829EBFFD6004CC8E1 /* CoreDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FAF98729EBFFD6004CC8E1 /* CoreDataStoreTests.swift */; };
+		17FAF98C29EC0229004CC8E1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17FAF98A29EC0229004CC8E1 /* Model.xcdatamodeld */; };
+		17FAF98E29EC0290004CC8E1 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FAF98D29EC0290004CC8E1 /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		17904F7F29D0649D0095089B /* CommandsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsTests.swift; sourceTree = "<group>"; };
 		17FAF98529EBFE69004CC8E1 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		17FAF98729EBFFD6004CC8E1 /* CoreDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStoreTests.swift; sourceTree = "<group>"; };
+		17FAF98B29EC0229004CC8E1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		17FAF98D29EC0290004CC8E1 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,9 +240,19 @@
 		17FAF98429EBFE54004CC8E1 /* CoreDataStore */ = {
 			isa = PBXGroup;
 			children = (
+				17FAF98929EC01FD004CC8E1 /* Model */,
 				17FAF98529EBFE69004CC8E1 /* CoreDataStore.swift */,
 			);
 			path = CoreDataStore;
+			sourceTree = "<group>";
+		};
+		17FAF98929EC01FD004CC8E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17FAF98A29EC0229004CC8E1 /* Model.xcdatamodeld */,
+				17FAF98D29EC0290004CC8E1 /* PersistenceController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +357,7 @@
 			files = (
 				17FAF98629EBFE69004CC8E1 /* CoreDataStore.swift in Sources */,
 				1762C7CF29D04485004CC9F7 /* ConsoleView.swift in Sources */,
+				17FAF98C29EC0229004CC8E1 /* Model.xcdatamodeld in Sources */,
 				1762C7FC29D04756004CC9F7 /* VirtualStore.swift in Sources */,
 				177A0EDA29D06E2900FE5148 /* Transaction.swift in Sources */,
 				1762C80529D04C09004CC9F7 /* CommandExecutorInterface.swift in Sources */,
@@ -355,6 +370,7 @@
 				1762C7CD29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift in Sources */,
 				177A0EDC29D06E4700FE5148 /* StackList.swift in Sources */,
 				1762C81629D05478004CC9F7 /* LogRowView.swift in Sources */,
+				17FAF98E29EC0290004CC8E1 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +655,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		17FAF98A29EC0229004CC8E1 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				17FAF98B29EC0229004CC8E1 /* Model.xcdatamodel */,
+			);
+			currentVersion = 17FAF98B29EC0229004CC8E1 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1762C7C129D04485004CC9F7 /* Project object */;
 }

@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ConsoleView: View {
-    @StateObject var viewModel: ConsoleViewModel = ConsoleViewModel(store: VirtualStore())
+    private var viewModel: ConsoleViewModel
     @State var textFieldText: String = ""
     @FocusState private var isFocused: Bool
+    
+    init(store: StoreInterface) {
+        viewModel = ConsoleViewModel(store: store)
+    }
     
     var body: some View {
         VStack {
@@ -48,6 +52,6 @@ struct ConsoleView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ConsoleView()
+        ConsoleView(store: VirtualStore())
     }
 }

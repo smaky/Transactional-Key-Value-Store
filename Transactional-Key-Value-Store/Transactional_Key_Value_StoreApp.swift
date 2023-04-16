@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct Transactional_Key_Value_StoreApp: App {
+    private var store: StoreInterface = VirtualStore()
     var body: some Scene {
         WindowGroup {
         #if os(macOS)
-            ConsoleView().frame(width: 500, height: 800)
+            ConsoleView(store: store).frame(width: 500, height: 800)
         #else
-            ConsoleView()
+            ConsoleView(store: store)
         #endif
         }
     }
