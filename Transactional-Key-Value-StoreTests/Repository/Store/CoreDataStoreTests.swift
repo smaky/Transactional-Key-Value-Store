@@ -12,7 +12,6 @@ final class CoreDataStoreTests: XCTestCase {
     private var store: StoreInterface!
     
     override func setUpWithError() throws {
-        
         store = CoreDataStore(persistanceController: PersistenceController(isInMemory: true))
     }
 

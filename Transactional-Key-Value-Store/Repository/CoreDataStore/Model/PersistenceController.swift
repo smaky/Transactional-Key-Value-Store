@@ -28,4 +28,15 @@ final class PersistenceController: NSObject {
         persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         persistentContainer.viewContext.shouldDeleteInaccessibleFaults = true
     }
+    
+    func saveContext (context: NSManagedObjectContext, mergeToParent: Bool = false) {
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
 }

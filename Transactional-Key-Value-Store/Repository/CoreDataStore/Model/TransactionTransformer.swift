@@ -5,7 +5,7 @@
 //  Created by Damian Smakulski on 16/04/2023.
 //
 
-import UIKit
+import Foundation
 
 class TransactionTransformer: NSSecureUnarchiveFromDataTransformer {
     override static var allowedTopLevelClasses: [AnyClass] {

@@ -28,6 +28,8 @@
 		177A0EDA29D06E2900FE5148 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A0ED929D06E2900FE5148 /* Transaction.swift */; };
 		177A0EDC29D06E4700FE5148 /* StackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A0EDB29D06E4700FE5148 /* StackList.swift */; };
 		17904F8029D0649D0095089B /* CommandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17904F7F29D0649D0095089B /* CommandsTests.swift */; };
+		17AFB71529EC598100839DCD /* UIKitAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AFB71429EC598100839DCD /* UIKitAppDelegate.swift */; };
+		17AFB71729EC5A4600839DCD /* NSKitAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AFB71629EC5A4600839DCD /* NSKitAppDelegate.swift */; };
 		17FAF98629EBFE69004CC8E1 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FAF98529EBFE69004CC8E1 /* CoreDataStore.swift */; };
 		17FAF98829EBFFD6004CC8E1 /* CoreDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FAF98729EBFFD6004CC8E1 /* CoreDataStoreTests.swift */; };
 		17FAF98C29EC0229004CC8E1 /* Transactional-Key-Value-Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17FAF98A29EC0229004CC8E1 /* Transactional-Key-Value-Store.xcdatamodeld */; };
@@ -70,6 +72,8 @@
 		177A0ED929D06E2900FE5148 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		177A0EDB29D06E4700FE5148 /* StackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackList.swift; sourceTree = "<group>"; };
 		17904F7F29D0649D0095089B /* CommandsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsTests.swift; sourceTree = "<group>"; };
+		17AFB71429EC598100839DCD /* UIKitAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitAppDelegate.swift; sourceTree = "<group>"; };
+		17AFB71629EC5A4600839DCD /* NSKitAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSKitAppDelegate.swift; sourceTree = "<group>"; };
 		17FAF98529EBFE69004CC8E1 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		17FAF98729EBFFD6004CC8E1 /* CoreDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStoreTests.swift; sourceTree = "<group>"; };
 		17FAF98B29EC0229004CC8E1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				1762C80229D04BD4004CC9F7 /* Repository */,
 				1762C80129D04BC8004CC9F7 /* Scene */,
 				1762C7CC29D04485004CC9F7 /* Transactional_Key_Value_StoreApp.swift */,
+				17AFB71429EC598100839DCD /* UIKitAppDelegate.swift */,
+				17AFB71629EC5A4600839DCD /* NSKitAppDelegate.swift */,
 				1762C7D029D04486004CC9F7 /* Assets.xcassets */,
 				1762C7D229D04486004CC9F7 /* Transactional_Key_Value_Store.entitlements */,
 				1762C7D329D04486004CC9F7 /* Preview Content */,
@@ -365,8 +371,10 @@
 				177A0EDA29D06E2900FE5148 /* Transaction.swift in Sources */,
 				1762C80529D04C09004CC9F7 /* CommandExecutorInterface.swift in Sources */,
 				17FAF99029EC1079004CC8E1 /* TransactionTransformer.swift in Sources */,
+				17AFB71529EC598100839DCD /* UIKitAppDelegate.swift in Sources */,
 				1762C80729D04C44004CC9F7 /* StoreCommandExecutor.swift in Sources */,
 				1762C80029D04A19004CC9F7 /* ConsoleViewModel.swift in Sources */,
+				17AFB71729EC5A4600839DCD /* NSKitAppDelegate.swift in Sources */,
 				1762C7FA29D0471E004CC9F7 /* StoreInterface.swift in Sources */,
 				1762C81C29D06109004CC9F7 /* Commands.swift in Sources */,
 				1762C81829D05B00004CC9F7 /* CommandParser.swift in Sources */,

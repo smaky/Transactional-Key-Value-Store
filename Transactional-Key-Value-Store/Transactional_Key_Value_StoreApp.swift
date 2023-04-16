@@ -9,12 +9,21 @@ import SwiftUI
 
 @main
 struct Transactional_Key_Value_StoreApp: App {
-    private let persistanceController = PersistenceController(isInMemory: true)
+#if os(macOS)
+    @NSApplicationDelegateAdaptor(NSKitAppDelegate.self) var appDelegate
+#else
+    @UIApplicationDelegateAdaptor(UIKitAppDelegate.self) var appDelegate
+#endif
+    
+    @Environment(\.scenePhase) private var scenePhase
+    
+    private let persistanceController = PersistenceController(isInMemory: false)
     private var store: StoreInterface
     
     init() {
         persistanceController.persistentContainer.newBackgroundContext()
         self.store = CoreDataStore(persistanceController: persistanceController)
+        appDelegate.persistanceController = persistanceController
         
 //        self.store = VirtualStore()
     }
@@ -26,6 +35,11 @@ struct Transactional_Key_Value_StoreApp: App {
         #else
             ConsoleView(store: store)
         #endif
+        }
+        .onChange(of: scenePhase) { phase in
+            if phase == .background {
+                persistanceController.saveContext(context: persistanceController.persistentContainer.viewContext)
+            }
         }
     }
 }
