@@ -28,6 +28,8 @@
 		177A0EDA29D06E2900FE5148 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A0ED929D06E2900FE5148 /* Transaction.swift */; };
 		177A0EDC29D06E4700FE5148 /* StackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A0EDB29D06E4700FE5148 /* StackList.swift */; };
 		17904F8029D0649D0095089B /* CommandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17904F7F29D0649D0095089B /* CommandsTests.swift */; };
+		17FAF98629EBFE69004CC8E1 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FAF98529EBFE69004CC8E1 /* CoreDataStore.swift */; };
+		17FAF98829EBFFD6004CC8E1 /* CoreDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FAF98729EBFFD6004CC8E1 /* CoreDataStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		177A0ED929D06E2900FE5148 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		177A0EDB29D06E4700FE5148 /* StackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackList.swift; sourceTree = "<group>"; };
 		17904F7F29D0649D0095089B /* CommandsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsTests.swift; sourceTree = "<group>"; };
+		17FAF98529EBFE69004CC8E1 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		17FAF98729EBFFD6004CC8E1 /* CoreDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 		1762C7F829D046FE004CC9F7 /* VirtualStore */ = {
 			isa = PBXGroup;
 			children = (
+				1762C7F729D046C0004CC9F7 /* Model */,
 				1762C7FB29D04756004CC9F7 /* VirtualStore.swift */,
 			);
 			path = VirtualStore;
@@ -166,9 +171,9 @@
 		1762C80229D04BD4004CC9F7 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				17FAF98429EBFE54004CC8E1 /* CoreDataStore */,
 				1762C7F929D0471E004CC9F7 /* StoreInterface.swift */,
 				1762C7F829D046FE004CC9F7 /* VirtualStore */,
-				1762C7F729D046C0004CC9F7 /* Model */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 		1762C80929D04D8A004CC9F7 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				17FAF98729EBFFD6004CC8E1 /* CoreDataStoreTests.swift */,
 				1762C7FD29D047B1004CC9F7 /* VirtualStoreTests.swift */,
 			);
 			path = Store;
@@ -225,6 +231,14 @@
 				1762C81329D05350004CC9F7 /* Log.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		17FAF98429EBFE54004CC8E1 /* CoreDataStore */ = {
+			isa = PBXGroup;
+			children = (
+				17FAF98529EBFE69004CC8E1 /* CoreDataStore.swift */,
+			);
+			path = CoreDataStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17FAF98629EBFE69004CC8E1 /* CoreDataStore.swift in Sources */,
 				1762C7CF29D04485004CC9F7 /* ConsoleView.swift in Sources */,
 				1762C7FC29D04756004CC9F7 /* VirtualStore.swift in Sources */,
 				177A0EDA29D06E2900FE5148 /* Transaction.swift in Sources */,
@@ -353,6 +368,7 @@
 				1762C80C29D04DB0004CC9F7 /* ConsoleViewModelTests.swift in Sources */,
 				1762C7FE29D047B1004CC9F7 /* VirtualStoreTests.swift in Sources */,
 				17904F8029D0649D0095089B /* CommandsTests.swift in Sources */,
+				17FAF98829EBFFD6004CC8E1 /* CoreDataStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
